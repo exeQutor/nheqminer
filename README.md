@@ -11,7 +11,7 @@ Download and install:
 Open **nheqminer.sln** under **nheqminer/nheqminer.sln** and build.
 
 ## Linux cmake **recommended** (Tested on Ubuntu Desktop 14.04 and 16.04 and Ubuntu server 14.04):
-You should have **CMake** installed (2.8 minimal version), boost (install from the repositories or download boost manually build and install it manually), download the sources manually or via git. 
+You should have **CMake** installed (2.8 minimal version), boost (install from the repositories or download boost manually build and install it manually), download the sources manually or via git.
 Under Ubuntu open a terminal and run the following commands:
   - `sudo apt-get install cmake build-essential libboost-all-dev`
   - `git clone https://github.com/nicehash/nheqminer.git`
@@ -31,29 +31,29 @@ Open a terminal and cd to nheqminer root folder and run the following commands (
   - `cd build`
   - `qmake ../nheqminer/nheqminer.pro`
   - `make`
-  
+
 
 # Run instructions:
 
 If run without parameters, miner will start mining with 75% of available virtual cores on NiceHash. Use parameter -h to learn about available parameters:
 
         -h              Print this help and quit
-        -l [location]   Location (eu, usa, hk, jp)
-        -u [username]   Username (bitcoinaddress)
+        -l [location]   Location (zmine.io:1337)
+        -u [username]   Username (zcash address)
         -p [password]   Password (default: x)
         -t [num_thrds]  Number of threads (default: number of sys cores)
         -d [level]      Debug print level (0 = print all, 5 = fatal only, default: 2)
         -b [hashes]     Run in benchmark mode (default: 100 hashes)
         -a [port]       Local API port (default: 0 = do not bind)
-        
+
 Example to run benchmark:
 
         nheqminer_x64_AVX.exe -b
-        
+
 Example to run with full logging (including network dump):
 
         nheqminer_x64_AVX.exe -d 0
-        
+
 Example to mine with your own BTC address and worker1 on USA server:
 
         nheqminer_x64_AVX.exe -l usa -u YOUR_BTC_ADDRESS_HERE.worker1
